@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/ba94b17175.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./estilos/estilos.css">
     <title>Document</title>
@@ -51,7 +53,7 @@
 
     <main>
 
-        <section class="seccionBlack">
+        <section class="seccionBlack" data-aos="fade-right">
 
             <p class="pUbicacionB">Ubicacion: Los Angeles</p>
 
@@ -91,7 +93,7 @@
 
         </section>
 
-        <section class="seccionWhite">
+        <section class="seccionWhite" data-aos="fade-left">
 
             <p class="pUbicacionW">Ubicacion: Barcelona</p>
 
@@ -131,7 +133,7 @@
 
         </section>
 
-        <section class="seccionBlack">
+        <section class="seccionBlack" data-aos="fade-right">
 
             <p class="pUbicacionB">Ubicacion: San Francisco</p>
 
@@ -170,7 +172,7 @@
 
         </section>
 
-        <section class="seccionWhite">
+        <section class="seccionWhite" data-aos="fade-left">
 
             <p class="pUbicacionW">Ubicacion: Madrid</p>
 
@@ -251,6 +253,10 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
