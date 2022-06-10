@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 body{
-    background-color: blue;
+    background-color: green;
     font-family:'Noto Sans';
 }
 
-header nav ul {
+/* header nav ul {
     background-color: black;
 
     display: flex;
@@ -24,7 +24,7 @@ a{
     font-size: 18px;
     color: white;
     text-decoration: none;
-}
+} */
 
 .footer {
     color: white;
@@ -122,6 +122,10 @@ a{
     grid-template-areas:
     "img1 img2"
     "img3 img4";
+}
+
+figure{
+    margin: 0;
 }
 
 .imgHijo1 figure img{
@@ -274,7 +278,7 @@ iframe{
 
 @media (min-width:769px) and (max-width:1023px) {
 
-    header nav ul {
+    /* header nav ul {
         height: 5em;
         background-color: black;
         list-style-type: none;
@@ -285,7 +289,7 @@ iframe{
     
     a{
         font-size: 20px;
-    }
+    } */
 
     .hero {
         height: 70vh;
@@ -339,7 +343,7 @@ iframe{
 
 @media (min-width:1024px) {
 
-    header nav ul {
+    /* header nav ul {
         height: 5em;
         list-style-type: none;
         background-color: black;
@@ -355,7 +359,7 @@ iframe{
     
     a{
         font-size: 22px;
-    }
+    } */
 
     .hero {
         background-color: red;
@@ -753,13 +757,12 @@ form textarea{
     background-size: cover;
     background-position: bottom;
     background-color: aliceblue;
-    height: 100vh;
-
-    text-align: center;
+}
+    /* text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .top-historia > *{
@@ -772,11 +775,11 @@ form textarea{
     font-size: 25px;
     border: 2px solid black;
     border-radius: 20px;
-}
+} */
 
 @media (min-width:769px) and (max-width:1023px) {
     
-    .top-historia > *{
+    /* .top-historia > *{
         font-size: 21px;
         padding: 5px;
     }
@@ -785,13 +788,13 @@ form textarea{
         font-size: 30px;
         border: 2px solid black;
         border-radius: 20px;
-    }
+    } */
 
 }
 
 @media (min-width:1024px) {
     
-    .top-historia > *{
+    /* .top-historia > *{
         font-size: 25px;
         padding: 10px;
         
@@ -801,13 +804,12 @@ form textarea{
         font-size: 50px;
         border: 2px solid black;
         border-radius: 20px;
-    }
+    } */
 
     .footer {
         color: white;
         font-size: 50px;
         background-color: black;
-        height: auto;
     
         display: flex;
         flex-direction: column;
@@ -822,6 +824,8 @@ form textarea{
     }
 
 }
+
+
 
 
 /*------------------------------------- HISTORIA ------------------------------------------------------- */
