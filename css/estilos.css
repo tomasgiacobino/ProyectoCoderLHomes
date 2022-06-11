@@ -249,7 +249,7 @@ figure{
 }
 
 .pFinalM{
-    font-size: 18px;
+    list-style-type: none;
 }
 
 .pVideo {
@@ -268,6 +268,7 @@ iframe{
     color: black;
     font-size: 18px;
     cursor: pointer;
+    text-decoration: none;
     
 }
 
@@ -456,6 +457,7 @@ iframe{
     }
 
     .pVideo {
+        font-size: 40px;
         display: block;
     }
     
@@ -603,7 +605,6 @@ iframe{
     text-align: center;
     width: 300px;
     border-radius:15px;
-    height: auto;
 }
 
 .imgPng {
@@ -828,5 +829,5 @@ form textarea{
 
 
 
-/*------------------------------------- HISTORIA ------------------------------------------------------- */
 
+/*------------------------------------- HISTORIA ------------------------------------------------------- */
