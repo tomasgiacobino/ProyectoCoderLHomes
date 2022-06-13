@@ -1,87 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: green;
-    font-family:'Noto Sans';
-}
-
-/* header nav ul {
-    background-color: black;
-
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    padding-bottom: 1em;
-    padding-top: 1em;
-    gap: 10px;
-}
-
-a{
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-} */
-
-.footer {
-    color: white;
-    font-size: 30px;
-    background-color: black;
-    height: auto;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.footer_icons{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 20px;
-}
-
+@import "./base/generales";
+@import "./layout/pagInicio/hero";
 /*------------------------------------- INDEX ------------------------------------------------------- */
 
-.hero {
-    background-color: red;
-    background-image: url(../img/fondos/fotofondo1.jpg);
-    background-size: cover;
-    background-position: bottom;
-    height: 50vh;
-
-}
-
-.divIndex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-    gap: 30px;
-
-}
-
-.divIndex2{
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 15px;
-}
-
-.divIndex2 h1{
-    font-size: 30px;
-}
-
-.divIndex2 h2{
-    font-size: 25px;
-}
-
-.pMain {
-    font-size: 20px;
-}
 
 /*------------------------------------- SeccionBlack ------------------------------------------------------- */
 
@@ -279,41 +199,28 @@ iframe{
 
 @media (min-width:769px) and (max-width:1023px) {
 
-    /* header nav ul {
-        height: 5em;
-        background-color: black;
-        list-style-type: none;
+    // .hero {
+    //     height: 70vh;
+    
+    // }
+    
+    // .divIndex{
+    //     padding-top: 70px;
+    //     gap:70px;
+    
+    // }
+    
+    // .divIndex2 h1{
+    //     font-size: 40px;
+    // }
 
-        flex-direction: row;
-        justify-content: space-around;
-    }
+    // .divIndex2 h2{
+    //     font-size: 35px;
+    // }
     
-    a{
-        font-size: 20px;
-    } */
-
-    .hero {
-        height: 70vh;
-    
-    }
-    
-    .divIndex{
-        padding-top: 70px;
-        gap:70px;
-    
-    }
-    
-    .divIndex2 h1{
-        font-size: 40px;
-    }
-
-    .divIndex2 h2{
-        font-size: 35px;
-    }
-    
-    .pMain {
-        font-size: 30px;
-    }
+    // .pMain {
+    //     font-size: 30px;
+    // }
 
     .pUbicacionB, .pUbicacionW, .pDescripcionB, .pDescripcionW{
         font-size: 38px;
@@ -344,57 +251,38 @@ iframe{
 
 @media (min-width:1024px) {
 
-    /* header nav ul {
-        height: 5em;
-        list-style-type: none;
-        background-color: black;
-        list-style-type: none;
-
-        display: flex;
-        flex-direction: row;
-        align-items:center;
-        justify-content: space-around;
-        padding-bottom: 1em;
-        padding-top: 1em;
-    }
+    // .hero {
+    //     background-color: red;
+    //     background-image: url(../img/fondos/fotofondo1.jpg);
+    //     background-size: cover;
+    //     background-position: bottom;
     
-    a{
-        font-size: 22px;
-    } */
-
-    .hero {
-        background-color: red;
-        background-image: url(../img/fondos/fotofondo1.jpg);
-        background-size: cover;
-        background-position: bottom;
-        height: 100vh;
+    // }
     
-    }
+    // .divIndex{
+    //     padding-top: 100px;
+    //     gap:100px;
     
-    .divIndex{
-        padding-top: 100px;
-        gap:100px;
-    
-    }
+    // }
 
-    .divIndex2 h1{
-        font-size: 60px;
-    }
+    // .divIndex2 h1{
+    //     font-size: 60px;
+    // }
 
-    .divIndex2 h2{
-        font-size: 42px;
-    }
+    // .divIndex2 h2{
+    //     font-size: 42px;
+    // }
 
-    .divIndex p{
-        font-size: 40px;
-    }
+    // .divIndex p{
+    //     font-size: 40px;
+    // }
 
     
-    .divIndex2{
-        border: 1px solid black;
-        border-radius: 15px;
-        padding: 35px;
-    }
+    // .divIndex2{
+    //     border: 1px solid black;
+    //     border-radius: 15px;
+    //     padding: 35px;
+    // }
 
     .seccionBlack{
         grid-template-columns: 60% 40% ;
