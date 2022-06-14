@@ -10,22 +10,3 @@ body{
     font-family:'Noto Sans';
 }
 
-.footer{
-
-    color: white;
-    font-size: 25px;
-    background-color: black;
-    height: auto;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-
-        .footer_icons{
-
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-
-    }
-}

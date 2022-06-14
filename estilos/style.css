@@ -11,32 +11,6 @@ body {
   font-family: 'Noto Sans';
 }
 
-.footer {
-  color: white;
-  font-size: 25px;
-  background-color: black;
-  height: auto;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.footer .footer_icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5px;
-}
-
 .hero {
   background-color: white;
   background-image: url(../img/fondos/fotofondo1.jpg);
@@ -322,10 +296,76 @@ body {
   width: 100%;
 }
 
+@media (min-width: 769px) and (max-width: 1023px) {
+  .seccionBlack .pUbicacionB {
+    font-size: 38px;
+  }
+  .seccionBlack .pDescripcionB {
+    font-size: 38px;
+  }
+  .seccionBlack .buttonBlack {
+    font-size: 22px;
+  }
+  .seccionWhite .pUbicacionW {
+    font-size: 38px;
+  }
+  .seccionWhite .pDescripcionW {
+    font-size: 38px;
+  }
+  .seccionWhite .buttonWhite {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .seccionBlack {
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "ubi ubi" "img desc" "boton boton";
+  }
+  .seccionBlack .pUbicacionB {
+    font-size: 50px;
+  }
+  .seccionBlack .pDescripcionB {
+    margin-top: 150px;
+    margin-bottom: 0px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: desc;
+    font-size: 40px;
+  }
+  .seccionBlack .buttonBlack {
+    font-size: 28px;
+  }
+  .seccionWhite {
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "ubi ubi" "desc img" "boton boton";
+  }
+  .seccionWhite .pUbicacionW {
+    font-size: 50px;
+  }
+  .seccionWhite .pDescripcionW {
+    margin-top: 150px;
+    margin-bottom: 0px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: desc;
+    font-size: 40px;
+  }
+  .seccionWhite .buttonWhite {
+    font-size: 28px;
+  }
+}
+
 .finalMain {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#D9D1BC), color-stop(#F2ECD6), to(#FFFEFC));
   background-image: linear-gradient(#D9D1BC, #F2ECD6, #FFFEFC);
-  height: 200px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,6 +383,7 @@ body {
 .finalMain .pFinalM {
   list-style-type: none;
   font-size: 20px;
+  padding-top: 1em;
 }
 
 .finalMain .buttonVerProp {
@@ -367,7 +408,7 @@ body {
 
 @media (min-width: 1024px) {
   .finalMain {
-    height: 600px;
+    height: auto;
   }
   .finalMain .pFinalM {
     display: none;
@@ -375,6 +416,7 @@ body {
   .finalMain .buttonVerProp {
     padding: 25px;
     font-size: 28px;
+    margin-top: 1em;
   }
   .finalMain .pVideo {
     font-size: 40px;
@@ -382,12 +424,10 @@ body {
   }
   .finalMain iframe {
     display: block;
+    padding-bottom: 2em;
   }
 }
 
-/*------------------------------------- INDEX ------------------------------------------------------- */
-/*------------------------------------- FinalMain ------------------------------------------------------- */
-/*------------------------------------- FinalMain ------------------------------------------------------- */
 /*------------------------------------- MEDIASQ ------------------------------------------------------- */
 @media (min-width: 769px) and (max-width: 1023px) {
   .pUbicacionB, .pUbicacionW, .pDescripcionB, .pDescripcionW {
@@ -444,7 +484,7 @@ body {
     grid-area: desc;
     font-size: 40px;
   }
-  .buttonBlack {
+  .buttonBlack, .buttonWhite {
     font-size: 28px;
   }
   .seccionWhite {
@@ -453,9 +493,6 @@ body {
     -ms-grid-rows: auto auto auto;
         grid-template-rows: auto auto auto;
         grid-template-areas: "ubi ubi" "desc img" "boton boton";
-  }
-  .buttonWhite {
-    font-size: 28px;
   }
 }
 

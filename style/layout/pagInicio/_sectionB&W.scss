@@ -1,7 +1,7 @@
 // SECTION BLACK 
 
 .seccionBlack{
-    background-color: black;
+    background-color: $sectionBlack;
     padding-top: 50px;
     padding-bottom: 50px;
     color: white;
@@ -100,7 +100,7 @@
 
 
 .seccionWhite{
-    background-color: white;
+    background-color: $sectionWhite;
     padding-top: 50px;
     padding-bottom: 50px;
     color: black;
@@ -140,14 +140,13 @@
             color: black;
             cursor: pointer;
             font-size: 18px;
-        }
 
-        .buttonWhite:hover{
-            background-color: black;
-            color: white;
-            border: 5px solid black;
-        
-        }
+            &:hover{
+                background-color: black;
+                color: white;
+                border: 5px solid black;
+            }
+        }   
 
 
         .imgPadre{
@@ -188,4 +187,98 @@
 
         }
     
+}
+
+@media (min-width:769px) and (max-width:1023px){
+
+    .seccionBlack{
+
+        .pUbicacionB{
+            font-size: 38px;
+        }
+        .pDescripcionB{
+            font-size: 38px;
+        }
+
+        .buttonBlack{
+            font-size: 22px;
+        }
+
+    }
+
+    .seccionWhite{
+
+        .pUbicacionW{
+            font-size: 38px;
+        }
+
+        .pDescripcionW{
+            font-size: 38px;
+        }
+
+        .buttonWhite{        
+            font-size: 22px;
+        }
+
+    }
+
+}
+
+@media (min-width:1024px) {
+
+    .seccionBlack{
+        grid-template-columns: 60% 40% ;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "ubi ubi"
+        "img desc"
+        "boton boton"
+        ;
+
+
+            .pUbicacionB{
+                font-size: 50px;
+            }
+
+            .pDescripcionB{
+                margin-top:150px;
+                margin-bottom: 0px;
+                grid-area:desc;
+                font-size: 40px;
+            }
+
+            .buttonBlack{
+                font-size: 28px;
+            }
+        
+    }
+
+       
+
+    .seccionWhite{
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "ubi ubi"
+        "desc img"
+        "boton boton"
+        ;
+
+            .pUbicacionW{
+                font-size: 50px;
+            }
+
+            .pDescripcionW{
+                margin-top:150px;
+                margin-bottom: 0px;
+                grid-area:desc;
+                font-size: 40px;
+            }
+
+            .buttonWhite{
+                font-size: 28px;
+            }
+        
+    }
+
 }
