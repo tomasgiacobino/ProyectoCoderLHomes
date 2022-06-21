@@ -1,0 +1,312 @@
+@import "../../utilities/mixins";
+
+
+// SECTION BLACK 
+
+.button{
+    grid-area:boton;            
+    margin-top: 1.5em;
+    padding: 1em;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}    
+
+.seccionBlack{
+    background-color: $sectionBlack;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    height: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "ubi"
+    "img"
+    "desc"
+    "boton"
+    ;
+
+        .pUbicacionB{
+            grid-area:ubi;
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+
+        .imgPadre{
+            grid-area:img;
+            width: 100%;
+            height: auto;
+            display:grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            grid-template-areas:
+            "img1 img2"
+            "img3 img4";
+
+                figure{
+                    margin: 0;
+                }
+            
+                .imgHijo1 {
+                    figure {
+                        img{
+                            grid-area: img1;
+                            width: 100%;
+                        }
+                    }
+                }
+                
+                .imgHijo2 {
+                    figure {
+                        img{
+                            grid-area: img2;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .imgHijo3 {
+                    figure {
+                        img{
+                            grid-area: img3;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .imgHijo4 {
+                    figure {
+                        img{
+                            grid-area: img4;
+                            width: 100%;
+                        }
+                    }
+                }
+        }
+
+        .pDescripcionB{
+            grid-area:desc;
+            margin-top:20px;            
+            font-size: 30px;
+        }
+
+        .buttonBlack{
+            @extend .button;
+            grid-area:boton;            
+            border: 5px solid white;
+            background-color: black;
+            color: white;
+
+			&:hover{
+				    background-color: white;
+            		color: black;
+            		border: 5px solid white;
+			}
+        }
+
+        
+
+    @include breakpoints(md){
+
+        .pUbicacionB, .pDescripcionB{
+            font-size: 38px;
+        }
+
+        .buttonBlack{
+            font-size: 22px;
+        }
+    }
+
+    @include breakpoints(lg) {
+
+        grid-template-columns: 60% 40% ;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "ubi ubi"
+        "img desc"
+        "boton boton"
+        ;
+
+        .pUbicacionB{
+            grid-area:ubi;
+            font-size: 50px;
+        }
+
+        .imgPadre{
+            grid-area:img
+        }
+
+        .pDescripcionB{
+            grid-area:desc;
+            margin-top:150px;
+            margin-bottom: 0px;            
+            font-size: 40px;
+        }
+
+        .buttonBlack{
+            grid-area:boton;
+            font-size: 28px;
+        }
+
+    }
+    
+}
+
+
+// SECCION WHITE
+
+
+.seccionWhite{
+    background-color: $sectionWhite;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: black;
+    height: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "ubi"
+    "img"
+    "desc"
+    "boton"
+    ;
+
+        .pUbicacionW{
+            grid-area:ubi;
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+
+        .imgPadre{
+            grid-area:img;
+            width: 100%;
+            height: auto;
+            display:grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            grid-template-areas:
+            "img1 img2"
+            "img3 img4";
+
+                figure{
+                    margin: 0;
+                }
+                
+                .imgHijo1 {
+                    figure{ 
+                        img{
+                            grid-area: img1;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .imgHijo2 {
+                    figure{ 
+                        img{
+                            grid-area: img2;
+                            width: 100%;
+                        }
+                    }
+                }
+                    
+                .imgHijo3 {
+                    figure{ 
+                        img{
+                            grid-area: img3;
+                            width: 100%;
+                        }
+                    }
+                }
+                
+                .imgHijo4 {
+                    figure{ 
+                        img{
+                            grid-area: img4;
+                            width: 100%;
+                        }
+                    }
+                }
+
+        }
+
+        .pDescripcionW{
+            grid-area:desc;
+            margin-top:20px;
+            font-size: 30px;
+        }
+
+        .buttonWhite{
+            @extend .button; 
+            grid-area:boton;           
+            border: 5px solid black;
+            background-color: white;
+            color: black;
+
+            &:hover{
+                background-color: black;
+                color: white;
+                border: 5px solid black;
+            }
+        }   
+
+
+        
+    
+       
+    @include breakpoints(md){
+
+        .pUbicacionW, .pDescripcionW{
+            font-size: 38px;
+        }
+
+        .buttonWhite{        
+            font-size: 22px;
+        }
+
+    }
+
+    @include breakpoints(lg){
+
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "ubi ubi"
+        "desc img"
+        "boton boton"
+        ;
+
+            .pUbicacionW{
+                grid-area: ubi;
+                font-size: 50px;
+            }
+
+            .imgPadre{
+                grid-area:img;
+            }
+
+            .pDescripcionW{
+                grid-area:desc;
+                margin-top:150px;
+                margin-bottom: 0px;
+                font-size: 40px;
+            }
+
+            .buttonWhite{
+                grid-area:boton;
+                font-size: 28px;
+            }
+
+            
+
+
+    }
+
+}

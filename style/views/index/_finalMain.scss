@@ -32,35 +32,30 @@
             iframe{
                 display: none;
             }
-}
 
-@media (min-width:1024px) {
+    @include breakpoints(lg){
 
-    .finalMain{
-        height: auto;
+        .pFinalM{
+            display: none;
+        }
+
+        .buttonVerProp{
+            padding: 25px;
+            font-size: 28px;
+            margin-top: 1em;
+            
+        }
+
+        .pVideo {
+            font-size: 40px;
+            display: block;
+        }
+
+        iframe{
+            display: block;
+            padding-bottom:2em;
+        }
 
 
-            .pFinalM{
-                display: none;
-            }
-
-            .buttonVerProp{
-                padding: 25px;
-                font-size: 28px;
-                margin-top: 1em;
-                
-            }
-
-            .pVideo {
-                font-size: 40px;
-                display: block;
-            }
-
-            iframe{
-                display: block;
-                padding-bottom:2em;
-            }
-        
     }
-
 }

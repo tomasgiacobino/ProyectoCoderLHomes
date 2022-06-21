@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap");
+body {
+  background-color: green;
+  font-family: 'Noto Sans';
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-body {
-  background-color: green;
-  font-family: 'Noto Sans';
 }
 
 .hero {
@@ -53,7 +53,7 @@ body {
   font-size: 20px;
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 769px) {
   .hero {
     height: 70vh;
   }
@@ -94,6 +94,17 @@ body {
   }
 }
 
+.button, .seccionBlack .buttonBlack, .seccionWhite .buttonWhite {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: boton;
+  margin-top: 1.5em;
+  padding: 1em;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
 .seccionBlack {
   background-color: black;
   padding-top: 50px;
@@ -116,40 +127,6 @@ body {
   grid-area: ubi;
   margin-bottom: 40px;
   font-size: 30px;
-}
-
-.seccionBlack .pDescripcionB {
-  margin-top: 20px;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: desc;
-  font-size: 30px;
-}
-
-.seccionBlack .buttonBlack {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: boton;
-  margin-top: 1.5em;
-  padding: 1em;
-  border-radius: 15px;
-  border: 5px solid white;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.seccionBlack .buttonBlack:hover {
-  background-color: white;
-  color: black;
-  border: 5px solid white;
-}
-
-.seccionBlack .buttonBlack:hover {
-  background-color: white;
-  color: black;
-  border: 5px solid white;
 }
 
 .seccionBlack .imgPadre {
@@ -197,6 +174,73 @@ body {
   width: 100%;
 }
 
+.seccionBlack .pDescripcionB {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: desc;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.seccionBlack .buttonBlack {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: boton;
+  border: 5px solid white;
+  background-color: black;
+  color: white;
+}
+
+.seccionBlack .buttonBlack:hover {
+  background-color: white;
+  color: black;
+  border: 5px solid white;
+}
+
+@media (min-width: 769px) {
+  .seccionBlack .pUbicacionB, .seccionBlack .pDescripcionB {
+    font-size: 38px;
+  }
+  .seccionBlack .buttonBlack {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .seccionBlack {
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "ubi ubi" "img desc" "boton boton";
+  }
+  .seccionBlack .pUbicacionB {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: ubi;
+    font-size: 50px;
+  }
+  .seccionBlack .imgPadre {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: img;
+  }
+  .seccionBlack .pDescripcionB {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: desc;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    font-size: 40px;
+  }
+  .seccionBlack .buttonBlack {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: boton;
+    font-size: 28px;
+  }
+}
+
 .seccionWhite {
   background-color: white;
   padding-top: 50px;
@@ -219,34 +263,6 @@ body {
   grid-area: ubi;
   margin-bottom: 40px;
   font-size: 30px;
-}
-
-.seccionWhite .pDescripcionW {
-  margin-top: 20px;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: desc;
-  font-size: 30px;
-}
-
-.seccionWhite .buttonWhite {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: boton;
-  margin-top: 1.5em;
-  padding: 1em;
-  border-radius: 15px;
-  border: 5px solid black;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.seccionWhite .buttonWhite:hover {
-  background-color: black;
-  color: white;
-  border: 5px solid black;
 }
 
 .seccionWhite .imgPadre {
@@ -296,20 +312,31 @@ body {
   width: 100%;
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
-  .seccionBlack .pUbicacionB {
-    font-size: 38px;
-  }
-  .seccionBlack .pDescripcionB {
-    font-size: 38px;
-  }
-  .seccionBlack .buttonBlack {
-    font-size: 22px;
-  }
-  .seccionWhite .pUbicacionW {
-    font-size: 38px;
-  }
-  .seccionWhite .pDescripcionW {
+.seccionWhite .pDescripcionW {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: desc;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.seccionWhite .buttonWhite {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: boton;
+  border: 5px solid black;
+  background-color: white;
+  color: black;
+}
+
+.seccionWhite .buttonWhite:hover {
+  background-color: black;
+  color: white;
+  border: 5px solid black;
+}
+
+@media (min-width: 769px) {
+  .seccionWhite .pUbicacionW, .seccionWhite .pDescripcionW {
     font-size: 38px;
   }
   .seccionWhite .buttonWhite {
@@ -318,27 +345,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .seccionBlack {
-    -ms-grid-columns: 60% 40%;
-        grid-template-columns: 60% 40%;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "ubi ubi" "img desc" "boton boton";
-  }
-  .seccionBlack .pUbicacionB {
-    font-size: 50px;
-  }
-  .seccionBlack .pDescripcionB {
-    margin-top: 150px;
-    margin-bottom: 0px;
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: desc;
-    font-size: 40px;
-  }
-  .seccionBlack .buttonBlack {
-    font-size: 28px;
-  }
   .seccionWhite {
     -ms-grid-columns: 40% 60%;
         grid-template-columns: 40% 60%;
@@ -347,17 +353,30 @@ body {
         grid-template-areas: "ubi ubi" "desc img" "boton boton";
   }
   .seccionWhite .pUbicacionW {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: ubi;
     font-size: 50px;
   }
+  .seccionWhite .imgPadre {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: img;
+  }
   .seccionWhite .pDescripcionW {
-    margin-top: 150px;
-    margin-bottom: 0px;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: desc;
+    margin-top: 150px;
+    margin-bottom: 0px;
     font-size: 40px;
   }
   .seccionWhite .buttonWhite {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: boton;
     font-size: 28px;
   }
 }
@@ -407,9 +426,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .finalMain {
-    height: auto;
-  }
   .finalMain .pFinalM {
     display: none;
   }
@@ -428,77 +444,6 @@ body {
   }
 }
 
-/*------------------------------------- MEDIASQ ------------------------------------------------------- */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .pUbicacionB, .pUbicacionW, .pDescripcionB, .pDescripcionW {
-    font-size: 38px;
-  }
-  .buttonBlack, .buttonWhite, .pFinalM, .buttonVerProp {
-    font-size: 22px;
-  }
-  .footer {
-    color: white;
-    font-size: 35px;
-    background-color: black;
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .footer_icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 3em;
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .seccionBlack {
-    -ms-grid-columns: 60% 40%;
-        grid-template-columns: 60% 40%;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "ubi ubi" "img desc" "boton boton";
-  }
-  .pUbicacionB, .pUbicacionW {
-    font-size: 50px;
-  }
-  .pDescripcionB, .pDescripcionW {
-    margin-top: 150px;
-    margin-bottom: 0px;
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: desc;
-    font-size: 40px;
-  }
-  .buttonBlack, .buttonWhite {
-    font-size: 28px;
-  }
-  .seccionWhite {
-    -ms-grid-columns: 40% 60%;
-        grid-template-columns: 40% 60%;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "ubi ubi" "desc img" "boton boton";
-  }
-}
-
-/*------------------------------------- MEDIASQ ------------------------------------------------------- */
-/*------------------------------------- INDEX ------------------------------------------------------- */
-/*------------------------------------- PROPIEDADES ------------------------------------------------------- */
 .encontrarCasa {
   background-color: red;
   background-image: url(../img/fondos/fotofondo1.jpg);
@@ -522,7 +467,7 @@ body {
 }
 
 .encontrarCasa h1 {
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .encontrarCasa h2 {
@@ -537,17 +482,18 @@ body {
   font-size: 18px;
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+.encontrarCasa form input {
+  border: none;
+}
+
+@media (min-width: 769px) {
   .encontrarCasa h1 {
     font-size: 45px;
   }
   .encontrarCasa h2 {
     font-size: 28px;
   }
-  .encontrarCasa p {
-    font-size: 22px;
-  }
-  .encontrarCasa form {
+  .encontrarCasa p, .encontrarCasa form {
     font-size: 22px;
   }
 }
@@ -562,16 +508,11 @@ body {
   .encontrarCasa h2 {
     font-size: 33px;
   }
-  .encontrarCasa p {
-    font-size: 25px;
-  }
-  .encontrarCasa form {
+  .encontrarCasa p, .encontrarCasa form {
     font-size: 25px;
   }
 }
 
-/*------------------------------------- PROPIEDADES ------------------------------------------------------- */
-/*------------------------------------- CLIENTES ------------------------------------------------------- */
 .fondoCliente {
   background-image: url(../img/clientes/fotoclientes1.jpg);
   background-size: cover;
@@ -600,6 +541,24 @@ body {
   font-size: 25px;
 }
 
+@media (min-width: 769px) {
+  .fondoCliente h1 {
+    font-size: 45px;
+  }
+  .fondoCliente h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fondoCliente h1 {
+    font-size: 50px;
+  }
+  .fondoCliente h2 {
+    font-size: 35px;
+  }
+}
+
 .cards {
   background-color: black;
   width: 100%;
@@ -622,7 +581,19 @@ body {
           justify-content: center;
 }
 
-.card {
+@media (min-width: 769px) {
+  .cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.cards .card {
+  height: 500px;
   border: 1px solid black;
   background-color: #D9D1BC;
   text-align: center;
@@ -630,59 +601,23 @@ body {
   border-radius: 15px;
 }
 
-.card:hover {
+.cards .card:hover {
   -webkit-transform: rotateZ(10deg);
           transform: rotateZ(10deg);
 }
 
-.imgPng {
+.cards .card .imgPng {
   width: 70%;
 }
 
-.nomCliente {
+.cards .card .nomCliente {
   font-size: 30px;
 }
 
-.descCliente {
+.cards .card .descCliente {
   font-size: 20px;
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
-  .fondoCliente h1 {
-    font-size: 45px;
-  }
-  .fondoCliente h2 {
-    font-size: 30px;
-  }
-  .cards {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 1024px) {
-  .fondoCliente h1 {
-    font-size: 50px;
-  }
-  .fondoCliente h2 {
-    font-size: 35px;
-  }
-  .cards {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-/*------------------------------------- CLIENTES ------------------------------------------------------- */
-/*------------------------------------- CONTACTANOS ------------------------------------------------------- */
 .fondoContacto {
   background: url(../img/fondos/fotofondo1.jpg);
   background-size: cover;
@@ -717,27 +652,27 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   width: 450px;
   height: auto;
-  /* box-sizing: border-box; */
   border-radius: 20px;
   margin-bottom: 20px;
   padding-bottom: 30px;
 }
 
 .fondoContacto form h4 {
+  padding-top: 0.5em;
   color: white;
   font-size: 30px;
 }
 
-.fondoContacto input {
+.fondoContacto form input {
   width: 80%;
-  margin: 10px;
-  padding: 10px;
-  /* box-sizing: border-box; */
+  margin: 0.6em;
+  padding: 0.6em;
   border: none;
   font-size: 17px;
 }
 
-form textarea {
+.fondoContacto form textarea {
+  margin: 0.6em;
   min-height: 50px;
   max-height: 100px;
   max-width: 80%;
@@ -745,7 +680,7 @@ form textarea {
   border: none;
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 769px) {
   .fondoContacto h1 {
     font-size: 50px;
   }
@@ -763,85 +698,10 @@ form textarea {
   }
 }
 
-/*------------------------------------- CONTACTANOS ------------------------------------------------------- */
-/*------------------------------------- HISTORIA ------------------------------------------------------- */
 .top-historia {
   background-image: url(../img/fondos/fotofondo1.jpg);
   background-size: cover;
   background-position: bottom;
-  background-color: aliceblue;
+  background-color: black;
 }
-
-/* text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.top-historia > *{
-    font-size: 18px;
-    padding: 10px;
-    
-}
-
-.top-historia h1{    
-    font-size: 25px;
-    border: 2px solid black;
-    border-radius: 20px;
-} */
-@media (min-width: 769px) and (max-width: 1023px) {
-  /* .top-historia > *{
-        font-size: 21px;
-        padding: 5px;
-    }
-    
-    .top-historia h1{    
-        font-size: 30px;
-        border: 2px solid black;
-        border-radius: 20px;
-    } */
-}
-
-@media (min-width: 1024px) {
-  /* .top-historia > *{
-        font-size: 25px;
-        padding: 10px;
-        
-    }
-    
-    .top-historia h1{    
-        font-size: 50px;
-        border: 2px solid black;
-        border-radius: 20px;
-    } */
-  .footer {
-    color: white;
-    font-size: 50px;
-    background-color: black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .footer_icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 3em;
-    font-size: 30px;
-  }
-}
-
-/*------------------------------------- HISTORIA ------------------------------------------------------- */
 /*# sourceMappingURL=style.css.map */
