@@ -701,7 +701,7 @@ body {
 .top-historia {
   background-image: url(../img/fondos/fotofondo1.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
