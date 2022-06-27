@@ -7,4 +7,12 @@
         }                
     }
 }
+
+@mixin breakpoints2($size) {
+    @if map-has-key($breakpoint,$size) {
+        @media (max-width: #{map-get($breakpoint,$size)}) {
+            @content;
+        }                
+    }
+}
  
