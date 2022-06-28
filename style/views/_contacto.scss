@@ -33,7 +33,7 @@ $area: (
 
         form{
             background-color: rgba(0, 0, 0, 0.2);
-            width: 450px;
+            width: 400px;
             height: auto;
             border-radius: 20px;
             margin-bottom: 20px;
@@ -76,6 +76,10 @@ $area: (
         h2{
             font-size: 30px;
         }
+
+        form{
+            width: 450px;
+        }
     }
 
     @include breakpoints(lg){
@@ -85,6 +89,10 @@ $area: (
 
         h2{
             font-size: 40px;
+        }
+
+        form{
+            width: 450px;
         }
     }
 

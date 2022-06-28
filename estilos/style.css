@@ -694,7 +694,7 @@ body {
 
 .fondoContacto form {
   background-color: rgba(0, 0, 0, 0.2);
-  width: 450px;
+  width: 400px;
   height: auto;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -731,6 +731,9 @@ body {
   .fondoContacto h2 {
     font-size: 30px;
   }
+  .fondoContacto form {
+    width: 450px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -739,6 +742,9 @@ body {
   }
   .fondoContacto h2 {
     font-size: 40px;
+  }
+  .fondoContacto form {
+    width: 450px;
   }
 }
 
