@@ -1,6 +1,19 @@
+@import "../utilities/mixins";
+
 .top-historia {
     background-image: url(../img/fondos/fotofondo1.jpg);
     background-size: cover;
     background-position: top;
-    background-color: black;
+    background-color: grey;
+}
+
+@include breakpoints2 (ssm) {
+    .desc{
+        border-right: none !important;
+
+        p {
+            margin-left: 13rem;
+            
+        }
+     }  
 }
