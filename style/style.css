@@ -471,7 +471,7 @@ body {
   border-radius: 15px;
 }
 .cards .card:hover {
-  transform: rotateZ(10deg);
+  transform: rotateZ(7deg);
 }
 .cards .card .imgPng {
   width: 70%;

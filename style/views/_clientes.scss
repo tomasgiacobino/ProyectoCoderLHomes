@@ -3,7 +3,7 @@
 
 .fondoCliente{
     background-image: url(../img/clientes/fotoclientes1.jpg);
-    background-size: cover;
+    background-size:cover;
     height: 80vh;
     background-color: grey;
     text-align: center;
@@ -79,7 +79,7 @@
             border-radius:15px;
 
                 &:hover{
-                    transform: rotateZ(10deg);
+                    transform: rotateZ(7deg);
                 }
 
                 .imgPng {
